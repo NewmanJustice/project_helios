@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Page-1" id="RAGrEgdQwNqAvhI_GT32">
+    <mxGraphModel dx="1304" dy="2149" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="638" width="740" x="90" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" value="Judicial&amp;nbsp;" vertex="1">
+          <mxGeometry height="55.00000000000001" width="68" x="160" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" value="Citizen" vertex="1">
+          <mxGeometry height="55.00000000000001" width="68" x="290" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" value="Caseworker" vertex="1">
+          <mxGeometry height="55.00000000000001" width="68" x="410" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" value="Professional" vertex="1">
+          <mxGeometry height="55.00000000000001" width="68" x="540" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_MySQL_Server.svg;" value="CORE CIVIL DB - (Caseman schema)&amp;nbsp;" vertex="1">
+          <mxGeometry height="154.67" width="116" x="386" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.994;exitY=0.51;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.005;entryY=0.463;entryDx=0;entryDy=0;entryPerimeter=0;" target="23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="524" y="340" />
+              <mxPoint x="753" y="340" />
+              <mxPoint x="753" y="330" />
+              <mxPoint x="1276" y="330" />
+            </Array>
+            <mxPoint x="980" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/API_Management_Services.svg;" value="" vertex="1">
+          <mxGeometry height="150" width="161.9" x="363.05" y="312.5" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" value="API" vertex="1">
+          <mxGeometry height="55.00000000000001" width="68" x="660" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;labelBackgroundColor=default;" value="Common Civil API&#39;s to build UI&#39;s from. Specific to the Civil domain" vertex="1">
+          <mxGeometry height="75" width="120" x="634" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;labelBackgroundColor=default;" value="API&#39;s for external users to interact with" vertex="1">
+          <mxGeometry height="50" width="120" x="910" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#2D7600;fillColor=#60a917;align=center;verticalAlign=middle;rounded=0;fontColor=#ffffff;fontSize=22;" value="Product focused Civil direction" vertex="1">
+          <mxGeometry height="80" width="560" x="180" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="12" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="290" y="312.5" as="sourcePoint" />
+            <mxPoint x="230" y="232.50240676364376" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="400" y="307.5" as="sourcePoint" />
+            <mxPoint x="340" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="443.5" y="297.5" as="sourcePoint" />
+            <mxPoint x="443.5" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="12" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.834;exitY=-0.03;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="510" y="308" as="sourcePoint" />
+            <mxPoint x="550" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="550" y="312.5" as="sourcePoint" />
+            <mxPoint x="650" y="222.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Monolith API backend for all.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Core endpoints:&lt;/div&gt;&lt;div&gt;Orders&lt;/div&gt;&lt;div&gt;Judgements&lt;/div&gt;&lt;div&gt;Parties&lt;/div&gt;&lt;div&gt;Claims&lt;/div&gt;&lt;div&gt;Enforcements&lt;/div&gt;&lt;div&gt;Applications&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Case type extension api&#39;s:&lt;/div&gt;&lt;div&gt;Endpoints to enable case type specific functionality which is divergent i.e. money clams vs property claims - How does this not become a bottle neck for services? Do sub domains own their own api&#39;s within the monolith?&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="310" width="310" x="950" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="whiteSpace=wrap;html=1;" value="Step 1 - Re-platform CORE CIVIL DB&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Step 2 - API and Core Endpoints (enhancing current Caseman backend functionality)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Step 3 - Caseworker (reskin Caseman)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Step 4 -&amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="350" x="300" y="740" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
