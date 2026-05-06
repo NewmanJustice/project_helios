@@ -2,8 +2,8 @@
 name: Helios Portal — content and context progress
 description: Where we got to on portal content, key decisions made, and what's next
 type: project
-originSessionId: 66bae275-132b-4cf9-aaa7-283cec0fc778
 ---
+
 ## Content progress: sections 1 and 2 done, section 3 next
 
 **Why:** User wants to pick up content work in a future session without re-establishing context.
@@ -37,3 +37,17 @@ originSessionId: 66bae275-132b-4cf9-aaa7-283cec0fc778
 - All content in `src/components/PortalClient.js`
 - Styles in `src/app/globals.css`
 - Dark navy (#0A1628), white text, gold accent (#F5A623), Sora headings, Inter body
+
+### Look and feel decisions made
+- Scroll animations: staggered scale+fade per section child — `src/lib/animations.js` (swappable)
+- Section watermark words: oversized faded Civil jurisdiction terms in bottom-right of each section — `src/lib/sectionBackgrounds.js` (swappable)
+- Watermark words assigned: CIVIL, CORE CASE, ORDERS, CLAIMS, PARTIES, JUDGEMENTS, ENFORCEMENTS, APPLICATIONS
+- Watermark colour: #1a3a5c (close to background, very subtle)
+- Font sizes calculated dynamically via canvas to prevent long words from being clipped
+- Animation duration: 700ms, stagger: 120ms per child
+
+### Working style notes
+- User prefers to draft content collaboratively — propose copy first, get sign-off, then write to file
+- User edits markup directly in the IDE for small tweaks — don't re-read files unnecessarily
+- User wants swappable/isolated JS files for visual effects so they can be changed independently
+- Keep the dev server stopped when not actively testing — user will ask to start it
