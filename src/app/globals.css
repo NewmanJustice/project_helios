@@ -43,6 +43,15 @@ h1, h2, h3, h4, h5, h6 {
 
 p { margin-bottom: 1.25rem; max-width: 70ch; }
 
+.section-tagline {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(245, 166, 35, 0.85);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
 a { color: #F5A623; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -189,16 +198,9 @@ figcaption { font-size: 0.85rem; color: #F5A623; margin-bottom: 0.75rem; text-tr
   transform: scale(1.4);
 }
 
-/* --- Scroll Animations ------------------------------------- */
-.animate-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 400ms ease-out, transform 400ms ease-out;
-}
-
-.animate-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* --- Scroll Animations — driven by src/lib/animations.js --- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }
 
 /* --- Callout / Stat cards ---------------------------------- */

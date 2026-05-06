@@ -29,7 +29,7 @@
 | Status | P | E | Slug | Description |
 |--------|---|---|------|-------------|
 | 🚧 | P0 | XL | helios-portal | Stakeholder communications site — curated linear journey through Project Helios strategy |
-| ❓ | P2 | M | real-content | Replace lorem ipsum placeholder content with real copy across all portal sections |
+| 🚧 | P1 | M | real-content | Replace lorem ipsum placeholder content with real copy across all portal sections — sections 1 & 2 done, resuming at section 3 |
 
 ---
 
@@ -48,7 +48,7 @@ Full stakeholder portal for Project Helios. Dark consultancy aesthetic (navy/gol
 7. What This Means — impact by stakeholder lens
 8. Next Steps — what's being asked of the reader
 
-Static HTML/CSS/JS. Deploy to Azure Static Web Apps. Lorem ipsum content initially.
+Migrated to Next.js 14. Login at `/`, portal SPA at `/portal`, server-side auth via httpOnly cookie. Lorem ipsum content being replaced — sections 1 & 2 done.
 
 ### real-content
 

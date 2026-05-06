@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { animateSection } from '@/lib/animations';
+import { initSectionBackgrounds } from '@/lib/sectionBackgrounds';
 
 const SECTIONS = [
   { id: 1, title: 'Project Helios' },
@@ -24,15 +26,30 @@ export default function PortalClient() {
       const el = document.getElementById(`section-${id}`);
       if (!el) return;
 
-      el.classList.add('visible');
-
       const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
-        { threshold: 0.5 }
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+            if (!el.dataset.animated) {
+              el.dataset.animated = 'true';
+              animateSection(el);
+            }
+          }
+        },
+        { threshold: 0.15 }
       );
       obs.observe(el);
       observers.push(obs);
     });
+
+    initSectionBackgrounds();
+
+    // Animate section 1 immediately — it's already in the viewport
+    const first = document.getElementById('section-1');
+    if (first && !first.dataset.animated) {
+      first.dataset.animated = 'true';
+      animateSection(first);
+    }
 
     return () => observers.forEach((o) => o.disconnect());
   }, []);
@@ -53,7 +70,7 @@ export default function PortalClient() {
             onClick={(e) => { e.preventDefault(); jumpTo(id); }}
           >
             <span className="rail-dot" />
-            {id} — {title}
+            {title}
           </a>
         ))}
       </nav>
@@ -61,12 +78,13 @@ export default function PortalClient() {
       <section id="section-1" data-section="1" className="animate-in">
         <div className="section-inner">
           <h2 className="section-heading">Project Helios</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="section-tagline">Taking a fresh look at the technical landscape underpinning the Civil jurisdiction. To ensure what we build is coherent, maintainable, and driven by product thinking.</p>
+          <p>The Civil jurisdiction processes hundreds of thousands of cases each year — from money claims to property disputes. The systems that support this work have grown incrementally over decades, shaped by individual programmes rather than a shared technical Civil focused vision.</p>
+          <p>Project Helios steps back from that history. It takes a high-level view of the technical landscape and asks a fundamental question: are the solutions we have — and the solutions we are building — the right ones? And do they add up to something coherent, maintainable, and easily extendable?</p>
           <ul className="callout-list">
-            <li>Transformational digital initiative for caseworker operations</li>
-            <li>Modernising legacy infrastructure across all departments</li>
-            <li>Delivering measurable outcomes for citizens and staff</li>
+            <li>A clear-eyed assessment of the current technical estate</li>
+            <li>A direction of travel grounded in product thinking and shared foundations</li>
+            <li>A framework for making better, more joined-up decisions about what to build next</li>
           </ul>
         </div>
       </section>
@@ -74,11 +92,12 @@ export default function PortalClient() {
       <section id="section-2" data-section="2" className="animate-in">
         <div className="section-inner">
           <h2 className="section-heading">The Problem</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi.</p>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-          <blockquote className="callout">
-            <p>"The current system is a patchwork of legacy applications that cannot scale to meet modern demands. Every day we delay costs the organisation time, money, and public trust."</p>
-          </blockquote>
+          <p>The Civil jurisdiction is supported by a mix of legacy and reformed systems that do not share data. Each holds its own version of the truth — creating inconsistencies in reporting, and making it difficult to get a clear, reliable picture of case activity across the estate.</p>
+          <p>As new digital services have been introduced, each has largely rebuilt core case management functionality in isolation. Rather than extending a shared foundation, they sit alongside it — producing a fragmented technical landscape and an inconsistent experience for the people who use and operate them.</p>
+          <p>To keep things working, workarounds and tactical solutions have accumulated over time. These keep processes moving but introduce fragility. The result is a technical estate where adding new capability is slow, expensive, and invariably involves compromise.</p>
+          <div className="callout">
+            <p>The cost of building on what we have is no longer just technical. It is measured in slower delivery, reduced quality, and services that fall short of what users and the organisation needs.</p>
+          </div>
         </div>
       </section>
 
