@@ -1,6 +1,15 @@
 {
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test test/feature_helios-portal.test.js test/feature_helios-portal-ds-pi.test.js test/feature_helios-portal-edge.test.js"
+  },
   "dependencies": {
-    "murmur8": "^4.5.0"
+    "murmur8": "^4.5.0",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "jsdom": "^29.1.1"
