@@ -212,6 +212,54 @@ figcaption { font-size: 0.85rem; color: #F5A623; margin-bottom: 0.75rem; text-tr
   margin: 1.5rem 0;
 }
 
+.section-video {
+  display: block;
+  width: 100%;
+  margin: 1.5rem 0 24rem;
+  border-radius: 4px;
+  border-left: 3px solid #F5A623;
+}
+
+/* --- Architecture diagram (SVG) ---------------------------- */
+.arch-diagram {
+  margin: 3rem 0;
+}
+
+.arch-svg {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* All animated elements start invisible */
+.arch-svg [data-delay] {
+  opacity: 0;
+  transition: opacity 500ms ease, stroke-dashoffset 600ms ease;
+}
+
+/* Groups get a subtle translateY — SVG transforms need explicit style */
+.arch-svg g[data-delay] {
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+/* Stagger delays — is-visible added by IntersectionObserver */
+.arch-diagram.is-visible [data-delay="0"]  { opacity: 1; transition-delay: 0ms;    stroke-dashoffset: 0; transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="1"]  { opacity: 1; transition-delay: 200ms;  stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="2"]  { opacity: 1; transition-delay: 400ms;  stroke-dashoffset: 0; transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="3"]  { opacity: 1; transition-delay: 600ms;  stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="4"]  { opacity: 1; transition-delay: 700ms;  stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="5"]  { opacity: 1; transition-delay: 800ms;  stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="6"]  { opacity: 1; transition-delay: 900ms;  stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="7"]  { opacity: 1; transition-delay: 1000ms; stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="8"]  { opacity: 1; transition-delay: 1100ms; stroke-dashoffset: 0; }
+.arch-diagram.is-visible [data-delay="9"]  { opacity: 1; transition-delay: 800ms;  transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="10"] { opacity: 1; transition-delay: 900ms;  transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="11"] { opacity: 1; transition-delay: 1000ms; transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="12"] { opacity: 1; transition-delay: 1100ms; transform: translateY(0); }
+.arch-diagram.is-visible [data-delay="13"] { opacity: 1; transition-delay: 1200ms; transform: translateY(0); }
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -286,6 +334,32 @@ figcaption { font-size: 0.85rem; color: #F5A623; margin-bottom: 0.75rem; text-tr
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* --- Outcome cards ----------------------------------------- */
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.outcome-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 2px solid #F5A623;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.outcome-card p { margin-bottom: 0; }
+
+.outcome-label {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #F5A623;
+  margin-bottom: 0.6rem;
 }
 
 /* --- Responsive -------------------------------------------- */
