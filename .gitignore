@@ -36,6 +36,8 @@ yarn-error.log*
 next-env.d.ts
 
 .devcontainer/claudeinit.sh
+publishProfile.xml
+
 # murmur8
 .claude/implement-queue.json
 .claude/pipeline-history.json
