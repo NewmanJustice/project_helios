@@ -10,7 +10,7 @@ const SECTIONS = [
   { id: 3, title: 'The Vision' },
   { id: 4, title: 'The Core Concept' },
   { id: 5, title: 'What This Means' },
-  { id: 6, title: 'The Architecture' },
+  { id: 6, title: 'The Product Architecture' },
   { id: 7, title: 'The Roadmap' },
   // { id: 8, title: 'Next Steps' },
 ];
