@@ -169,7 +169,7 @@ export default function PortalClient() {
 
       <section id="section-6" data-section="6" className="animate-in">
         <div className="section-inner">
-          <h2 className="section-heading">The Architecture</h2>
+          <h2 className="section-heading">The Product Architecture</h2>
           <p>Civil Core sits at the centre of the Civil technical landscape. Products — whether they serve judges, citizens, caseworkers, or legal professionals — connect to a single API layer. That API layer reads and writes from a single authoritative database. One source of truth, consistently accessed.</p>
           <div className="arch-diagram" id="arch-diagram">
             <svg className="arch-svg" viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
